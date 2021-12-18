@@ -89,7 +89,7 @@ function refresh(){
         // console.log(data)
         console.log(data.company)
         var tag = document.createElement("p");
-        var text = document.createTextNode(data.offer);
+        var text = document.createTextNode(data.offer_value);
         tag.appendChild(text);
         var element = document.getElementById("col-offer");
         element.appendChild(tag);

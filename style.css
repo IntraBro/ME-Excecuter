@@ -23,8 +23,17 @@
 /* Create three equal columns that floats next to each other */
 .column {
 float: left;
-width: 112px;
+font-size: 13px;
+width: 85;
 padding: 10px;
+overflow-y: scroll;
+ /* Should be removed. Only for demonstration */
+}
+.column {
+float: left;
+width: 85px;
+padding: 10px;
+overflow-y: scroll;
  /* Should be removed. Only for demonstration */
 }
 
