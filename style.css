@@ -23,20 +23,22 @@
 /* Create three equal columns that floats next to each other */
 .column {
 float: left;
-font-size: 13px;
-width: 85;
+width: 230px;
 padding: 10px;
 overflow-y: scroll;
- /* Should be removed. Only for demonstration */
-}
-.column {
-float: left;
-width: 85px;
-padding: 10px;
-overflow-y: scroll;
+overflow-x: hidden;
  /* Should be removed. Only for demonstration */
 }
 
+
+.div {
+    float: left;
+    width: fit-content;
+    padding: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+     /* Should be removed. Only for demonstration */
+    }
 /* Clear floats after the columns */
 .row:after{
 content: "";

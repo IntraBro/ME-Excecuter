@@ -31,7 +31,7 @@ function SelectAllData(){
         );
     });
 }
-window.onload = SelectAllData();
+window.onload = SumValue('salesFeild');
 
 var dataList =[];
 function AddItemsToTable(date, offer_inq, offer, offer_date, offer_value, sales_person, status, company){
