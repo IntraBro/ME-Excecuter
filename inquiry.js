@@ -23,9 +23,9 @@ function SelectAllData(){
                 var offer_date = CurrentRecord.val().offer_date;
                 var offer_value = CurrentRecord.val().offer_value;
                 var status = CurrentRecord.val().status;
-                var sales_person = CurrentRecord.val().sales_person;
+                // var sales_person = CurrentRecord.val().sales_person;
                 var company = CurrentRecord.val().company;
-                AddItemsToTable(date, offer_inq, offer, offer_date, offer_value,sales_person, status, company);
+                AddItemsToTable(date, offer_inq, offer, offer_date, offer_value, status, company);
 
             }
         );
@@ -34,7 +34,7 @@ function SelectAllData(){
 window.onload = SelectAllData();
 
 var dataList =[];
-function AddItemsToTable(date, offer_inq, offer, offer_date, offer_value, sales_person, status, company){
+function AddItemsToTable(date, offer_inq, offer, offer_date, offer_value, status, company){
     var tbody1 = document.getElementById('tbody1');
     var trow = document.createElement('tr');
     var td8 = document.createElement('td');
@@ -44,7 +44,7 @@ function AddItemsToTable(date, offer_inq, offer, offer_date, offer_value, sales_
     var td4 = document.createElement('td');
     var td5 = document.createElement('td');
     var td6 = document.createElement('td');
-    var td9 = document.createElement('td');
+    // var td9 = document.createElement('td');
     var td7 = document.createElement('td');
     
     td1.classList +="dateFeild"
@@ -54,12 +54,12 @@ function AddItemsToTable(date, offer_inq, offer, offer_date, offer_value, sales_
     td5.classList +="offer_valueFeild"
     td7.classList +="statusFeild"
     td6.classList +="companyFeild"
-    td9.classList +="salesFeild"
+    // td9.classList +="salesFeild"
 
 
 
 
-    dataList.push([date, offer_inq, company, offer_date,offer,offer_value, sales_person,status])
+    dataList.push([date, offer_inq, company, offer_date,offer,offer_value,status])
     td1.innerHTML = date;
     td2.innerHTML = offer_inq;
     td3.innerHTML = company;
@@ -68,7 +68,7 @@ function AddItemsToTable(date, offer_inq, offer, offer_date, offer_value, sales_
     td6.innerHTML = offer_value;
     td7.innerHTML = status;
     td8.innerHTML = ++srno;
-    td9.innerHTML = sales_person;
+    // td9.innerHTML = sales_person;
 
     trow.appendChild(td8)
     trow.appendChild(td1); 
@@ -77,7 +77,7 @@ function AddItemsToTable(date, offer_inq, offer, offer_date, offer_value, sales_
     trow.appendChild(td4); 
     trow.appendChild(td5); 
     trow.appendChild(td6); 
-    trow.appendChild(td9);
+    // trow.appendChild(td9);
     trow.appendChild(td7);
 
 
@@ -100,7 +100,7 @@ var ModOfferDate = document.getElementById('OFMod')
 var ModOfferValue = document.getElementById('OVMod')
 var ModStatus = document.getElementById('StatusMod')
 var ModCompany = document.getElementById('CompMod')
-var ModSalesPerson = document.getElementById('SPMod')
+// var ModSalesPerson = document.getElementById('SPMod')
 
 var BTNModAdd = document.getElementById('AddModBtn')
 var BTNModUpd = document.getElementById('UpdModBtn')
@@ -119,8 +119,8 @@ function FillTboxes(index){
         ModOfferDate.value = dataList[index][3];
         ModOfferNo.value = dataList[index][4];
         ModOfferValue.value= dataList[index][5];
-        ModSalesPerson.value = dataList[index][6];
-        ModStatus.value = dataList[index][7];
+        // ModSalesPerson.value = dataList[index][6];
+        ModStatus.value = dataList[index][6];
         BTNModAdd.style.display = 'none';
         BTNModUpd.style.display = 'inline-block';
         BTNModDel.style.display = 'inline-block';
@@ -146,7 +146,7 @@ function AddStd(){
         offer : ModOfferNo.value,
         offer_date: ModOfferDate.value,
         offer_value : ModOfferValue.value,
-        sales_person:ModSalesPerson.value,
+        // sales_person:ModSalesPerson.value,
         status : ModStatus.value
     },
     (error) =>{
@@ -177,7 +177,7 @@ function UpdStd(){
         offer : ModOfferNo.value,
         offer_date: ModOfferDate.value,
         offer_value : ModOfferValue.value,
-        sales_person:ModSalesPerson.value,
+        // sales_person:ModSalesPerson.value,
         status : ModStatus.value
     },
     (error) =>{
@@ -197,7 +197,7 @@ function UpdStd(){
     ModOfferDate = "";
     ModOfferNo = "";
     ModOfferValue = "";
-    ModSalesPerson = "";
+    // ModSalesPerson = "";
     ModStatus = "";
     ModCompany = "";
     // window.location.reload()
@@ -328,9 +328,7 @@ searchBtn.onclick = function(){
     SearchTable('offer_dateFeild');
     else if(category.value==3)
     SearchTable('statusFeild');
-    else if(category.value==4)
-    SearchTable('salesFeild');
-    // SumValue('salesFeild');
+    
 
 
 }
